@@ -1,0 +1,65 @@
+---
+spn:
+  version: "^1.0"
+  matrix: [flavor]
+  filename: "themes/sp_night_{{ .Flavor }}.conf"
+---
+# SP Night — {{ .FlavorLabel }}
+# {{ .FlavorDesc }}
+#
+# Generated from the SP Night palette — do not edit by hand.
+# {{ .Repo }}
+#
+# install: {{ .Install }}
+# enable:  {{ .Activate }}   (in kitty.conf, after anything else that sets colours)
+
+background              {{ .R.ui.bg }}
+foreground              {{ .R.ui.fg }}
+selection_background    {{ .R.ui.selection }}
+selection_foreground    {{ .R.ui.fg }}
+
+cursor                  {{ .R.ui.cursor }}
+cursor_text_color       {{ .R.ui.on_accent }}
+
+url_color               {{ .R.ui.link }}
+
+# Borders and dividers. The focused split takes the signature colour; a bell is a
+# warning, so it borrows the diagnostic rather than an accent.
+active_border_color     {{ .R.ui.border_active }}
+inactive_border_color   {{ .R.ui.border }}
+bell_border_color       {{ .R.diagnostic.warn }}
+
+# Tabs. The active one lifts to glass, the rest stay concrete, and the bar itself
+# recedes into the deepest surface.
+active_tab_background   {{ .R.ui.selection }}
+active_tab_foreground   {{ .R.ui.fg }}
+inactive_tab_background {{ .R.ui.panel }}
+inactive_tab_foreground {{ .R.ui.fg_dim }}
+tab_bar_background      {{ .R.ui.bg_deep }}
+
+# Marks. Three of them have to be told apart at a glance, so they differ by hue
+# rather than by lightness — and every one reads dark text on a light field.
+mark1_foreground        {{ .R.ui.on_accent }}
+mark1_background        {{ .R.ui.accent }}
+mark2_foreground        {{ .R.ui.on_accent }}
+mark2_background        {{ .R.syntax.type }}
+mark3_foreground        {{ .R.ui.on_accent }}
+mark3_background        {{ .R.syntax.function }}
+
+# The 16 ANSI colours, normal and bright paired.
+color0  {{ .R.ansi.black }}
+color8  {{ .R.ansi.bright_black }}
+color1  {{ .R.ansi.red }}
+color9  {{ .R.ansi.bright_red }}
+color2  {{ .R.ansi.green }}
+color10 {{ .R.ansi.bright_green }}
+color3  {{ .R.ansi.yellow }}
+color11 {{ .R.ansi.bright_yellow }}
+color4  {{ .R.ansi.blue }}
+color12 {{ .R.ansi.bright_blue }}
+color5  {{ .R.ansi.magenta }}
+color13 {{ .R.ansi.bright_magenta }}
+color6  {{ .R.ansi.cyan }}
+color14 {{ .R.ansi.bright_cyan }}
+color7  {{ .R.ansi.white }}
+color15 {{ .R.ansi.bright_white }}
