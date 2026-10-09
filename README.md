@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">SP Night for <a href="https://sw.kovidgoyal.net/kitty/">kitty</a></h1>
+<h1 align="center">SP Night for <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a></h1>
 
 <p align="center">
   <strong>The sodium lamp turns the whole city this colour.</strong><br>
@@ -33,21 +33,21 @@ palette itself, so they can never drift from what you install.
 
 The city at 3am. Blue-violet dark, the sodium lamp burning warm on top.
 
-![kitty themed with SP Night Noite Paulista](assets/preview-noite.svg)
+![Kitty themed with SP Night Noite Paulista](assets/preview-noite.svg)
 
 ### Garoa — `sp_night_garoa.conf`
 
 The same window, seen through the drizzle. Flat grey — the garoa does not cool
 the city down, it washes it out.
 
-![kitty themed with SP Night Garoa](assets/preview-garoa.svg)
+![Kitty themed with SP Night Garoa](assets/preview-garoa.svg)
 
 ### Pico do Jaraguá — `sp_night_jaragua.conf`
 
 The same night, seen from the city's highest point. Near-black surfaces, with
 the forest left to the accents — and the red-and-white tower lit at the summit.
 
-![kitty themed with SP Night Pico do Jaraguá](assets/preview-jaragua.svg)
+![Kitty themed with SP Night Pico do Jaraguá](assets/preview-jaragua.svg)
 
 ## Install
 
@@ -83,7 +83,7 @@ cp kitty/themes/*.conf ~/.config/kitty/
 
 ## What gets themed
 
-| kitty key | Role | Meaning |
+| Kitty key | Role | Meaning |
 |---|---|---|
 | `color0`…`color15` | `ansi.*` | the full 16-colour ANSI mapping |
 | `background` / `foreground` | `ui.bg` / `ui.fg` | *laje* under the main text |
@@ -106,7 +106,7 @@ and enforced in CI.
 
 ## The mapping
 
-[`kitty.conf.tmpl`](kitty.conf.tmpl) is the full record of which kitty key means which
+[`kitty.conf.tmpl`](kitty.conf.tmpl) is the full record of which Kitty key means which
 role — the table above in complete form. The files in
 [`themes/`](themes) are what it resolves to, one per flavour.
 
